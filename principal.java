@@ -13,6 +13,3 @@ public static void main(String args[])
  }    
   
 }}
-  //comments1
-  //comments2
-  //comments3
