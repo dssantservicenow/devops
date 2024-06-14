@@ -1,3 +1,21 @@
+package test;
+
+import static org.junit.Assert.*;
+import org.junit.internal.AssumptionViolatedException;
+
+class Base {
+
+    protected void run() {
+        double r = Math.random();
+        if (r < 0.05) {
+            fail("oops");
+        } else if (r < 0.1) {
+            throw new AssumptionViolatedException("skipping");
+        }
+    }
+
+}
+
 /*
  * The MIT License
  *
@@ -21,21 +39,3 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE. esse teste #STRY0010184
  */
-
-package test;
-
-import static org.junit.Assert.*;
-import org.junit.internal.AssumptionViolatedException;
-
-class Base {
-
-    protected void run() {
-        double r = Math.random();
-        if (r < 0.05) {
-            fail("oops");
-        } else if (r < 0.1) {
-            throw new AssumptionViolatedException("skipping");
-        }
-    }
-
-}
